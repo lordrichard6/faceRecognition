@@ -90,7 +90,7 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({imageURL: this.state.input});
-      fetch('https://reizinho-dev.herokuapp.com/imageurl', {
+      fetch('https://reizinho-face-detect-server.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'content-Type': 'application/json'},
         body: JSON.stringify({
@@ -103,7 +103,7 @@ class App extends Component {
           moved to back-end */
       .then(response => {
         if (response) {
-          fetch('https://reizinho-dev.herokuapp.com/image', {
+          fetch('https://reizinho-face-detect-server.herokuapp.com/image', {
             method: 'put',
             headers: {'content-Type': 'application/json'},
             body: JSON.stringify({
